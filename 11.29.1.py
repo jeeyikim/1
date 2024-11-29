@@ -1,12 +1,12 @@
-echo "streamlit==1.25.0" >> requirements.txt
-echo "pandas==2.1.0" >> requirements.txt
-git init
-git add requirements.txt
-git commit -m "Add requirements file"
-git branch -M main
-git remote add origin https://github.com/jeeyikim/1.git
-git push -u origin main
-pip install -r requirements.txt
+import subprocess
+
+# git 명령어 실행 예시
+subprocess.run(["git", "init"])
+subprocess.run(["git", "add", "requirements.txt"])
+subprocess.run(["git", "commit", "-m", "Add requirements file"])
+subprocess.run(["git", "remote", "add", "origin", "https://github.com/jeeyikim/1.git"])
+subprocess.run(["git", "push", "-u", "origin", "main"])
+
 
 import streamlit as st
 import gspread
